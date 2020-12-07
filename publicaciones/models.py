@@ -11,8 +11,6 @@ class Publicacion(models.Model):
     #Aqui debo de extraer el creador del post para identificarlo
     createdAt = models.DateTimeField(auto_now_add=True)
 
-
-
     #Relations
     comentario = models.ManyToManyField(Comentario, related_name="Publicacion", blank=True)
     tags = models.ManyToManyField(Tag, related_name="Publicacion", blank=True)
